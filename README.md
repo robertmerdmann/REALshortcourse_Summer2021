@@ -29,5 +29,6 @@ We will place our instructions for your outside-of-class preparation work each w
 ### Week Two
 
 Major topic - plotting in R
+
 Details and documents: coming soon, stay tuned!
 
