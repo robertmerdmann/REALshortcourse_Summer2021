@@ -31,7 +31,7 @@ Given that R is open source, many resources are available online. We will use a 
 
 
 ## Setup your computer  
-Because we will be working remotely, it is very important that you spend time making sure that your computer is set-up and ready to go. You should have already downloaded the latest versions R and R studio, and we advise doing the same thing for Zoom. On occasion, all that's blocking something from working is an update, so keep this tyipe on your back pocket.
+Because we will be working remotely, it is very important that you spend time making sure that your computer is set-up and ready to go. You should have already downloaded the latest versions R and R studio, and we advise doing the same thing for Zoom. On occasion, all that's blocking something from working is an update, so keep this tip in your back pocket.
 
 ## GitHub  
 [GitHub](http://www.github.com) is a file storage and management site used by programmers. Programmers upload code to repositories (folders) and make it publicly available. We will use Github to share work with one another.
