@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-date: "`r Sys.Date()`"
+date: "2021-07-21"
 output:
   html_document:
     theme: spacelab
