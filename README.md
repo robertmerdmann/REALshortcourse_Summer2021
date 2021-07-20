@@ -32,3 +32,21 @@ Major topic - plotting in R
 
 Details and documents: coming soon, stay tuned!
 
+
+### Community Information
+
+Here, we will provide information about the members of the learning community, so you can get to know your colleagues.
+
+### Steering Committee
+
+The REAL Steering Committee has 8 members - listed here:
+
+Abha Ahuja - Minerva Schools at KGI (abha@minerva.kgi.edu)
+Christine Booth - University of Nebraska - Lincoln (cbooth2@unl.edu)
+Natalia Caporale - University of California - Davis (ncaporale@ucdavis.edu)
+Robert Erdmann - University of Minnesota Rochester (rerdmann@r.umn.edu)
+Robert Furrow - University of California - Davis (refurrow@ucdavis.edu)
+Joel Ledford - University of California - Davis (jmledford@ucdavis.edu)
+Kelsey Metzger - University of Minnesota Rochester (kmetzger@r.umn.edu)
+Emily Weigel - Georgia Institute of Technology (emily.weigel@biosci.gatech.edu)
+
