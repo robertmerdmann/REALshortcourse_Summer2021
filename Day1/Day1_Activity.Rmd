@@ -11,7 +11,7 @@ output:
 ## Learning Goals  
 *At the end of this exercise, you will be able to:*    
 1. Explain the difference between R and RStudio.  
-2. Perform simple arithmetic in R and RStudio.  
+2. Perform simple arithmetic in RStudio.  
 3. Write, format, and knit an RMarkdown report.  
 
 ## R and RStudio  
@@ -34,11 +34,11 @@ Re-run the code below to confirm.
 getwd()
 ```
 
-## R  
-Double click to open R (not RStudio) and find the carrot `>`. This is where commands are entered. Because R is a scripting language you don't point and click to run commands. Instead, you write instructions that are used by the computer to complete an operation. This makes it hard to learn at first because the instructions are specific. R is **not** tolerant of typos, punctuation errors, errant spaces, or other types of mistakes.  
+## The RStudio Console
+Find the carrot `>` within the Console window of RStudio. This is where commands are entered. Because R is a scripting language, if you use the Console within RStudio (or open R itself), you don't point and click to run commands. Instead, you write instructions that are used by the computer to complete an operation. This can make it hard to learn at first because the instructions are specific. R is **not** tolerant of typos, punctuation errors, errant spaces, or other types of mistakes.  
 
 ## Arithmetic  
-You can use R as a calculator; just enter the expression and press return.  Experiment by evaluating the following expression.
+You can use R as a calculator; just enter the expression and press return.  Experiment by entering the following expression within the console.
 ```{r arithmetic-ex-1}
 4*12
 ```
@@ -73,7 +73,7 @@ The RMarkdown file can then be exported in a number of formats. If you have ques
 Here is a great [tutorial on RMarkdown](https://www.markdowntutorial.com/).  
 
 ## RMarkdown Basics  
-RMarkdown is one of many types of documents that can be created in RStudio and is the one we will use most frequently in BIS 15L.  
+RMarkdown is one of many types of documents that can be created in RStudio and is the one we will use most frequently in the short course.  
 
 1. In RStudio, open a new markdown document: **File>New File>R Markdown** and title it "RMarkdown Practice".  
 2. At the top of the page, the header includes information about the title, author, date, and output. You can edit these fields, but avoid editing output for now.   
@@ -113,23 +113,3 @@ ggplot(mtcars, aes(x = factor(cyl))) +
 5. Lastly, commit and push this file to your GitHub repository.  
 
 
-## Check your understanding and prepare for next session
-
-**1. What is the difference between R and RStudio? What is GitHub and why is it useful to programmers?**  
-
-**2. Calculate the following expressions. Be sure to include each one in a separate code chunk.**  
-  + 5 - 3 * 2  
-  + 8 / 2 ** 2  
-  
-**3. `Objects` in R are a way in which we can store data or operations. We will use these a lot going forward and explain more next we meet. For now, make a new object `pi` as 3.14159265359 by running the following code chunk. You should now see the object `pi` in the environment window in the top right.**  
-```{r}
-pi <- 3.14159265359
-```
-
-**4. In order to get help with any command in R, just type a `?` in front the command of interest. Practice this by running the following code chunk.**  
-```{r}
-?mean
-```
-
-**5. Push your final code to GitHub!**
-Please be sure that you check the `keep md` file in the knit preferences. Check and see that it has uploaded.
