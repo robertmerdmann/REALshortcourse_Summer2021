@@ -250,7 +250,7 @@ div.tocify {
 <h2>Learning Goals</h2>
 <p><em>At the end of this exercise, you will be able to:</em><br />
 1. Explain the difference between R and RStudio.<br />
-2. Perform simple arithmetic in R and RStudio.<br />
+2. Perform simple arithmetic in RStudio.<br />
 3. Write, format, and knit an RMarkdown report.</p>
 </div>
 <div id="r-and-rstudio" class="section level2">
@@ -263,19 +263,19 @@ div.tocify {
 <p>Before you begin any project in RStudio, it is important that you are in the correct “working directory”. This is the folder on your computer where you are currently working; it is the location where RStudio will save all of your work. At first, most of the problems people encounter are because they are not in the correct working directory.</p>
 <p>Run the following code by clicking the small green arrow to check your current working directory.</p>
 <pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;/Users/roberterdmann/Downloads&quot;</code></pre>
+<pre><code>## [1] &quot;/Users/roberterdmann/Documents/GitHub/REALshortcourse_Summer2021/Day1&quot;</code></pre>
 <p>You may need to check that you’re working where the code is saved on your computer. If this is the case, go to Session&gt;Set Working Directory&gt;Choose Directory and pick the correct folder.</p>
 <p>Re-run the code below to confirm.</p>
 <pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;/Users/roberterdmann/Downloads&quot;</code></pre>
+<pre><code>## [1] &quot;/Users/roberterdmann/Documents/GitHub/REALshortcourse_Summer2021/Day1&quot;</code></pre>
 </div>
-<div id="r" class="section level2">
-<h2>R</h2>
-<p>Double click to open R (not RStudio) and find the carrot <code>&gt;</code>. This is where commands are entered. Because R is a scripting language you don’t point and click to run commands. Instead, you write instructions that are used by the computer to complete an operation. This makes it hard to learn at first because the instructions are specific. R is <strong>not</strong> tolerant of typos, punctuation errors, errant spaces, or other types of mistakes.</p>
+<div id="the-rstudio-console" class="section level2">
+<h2>The RStudio Console</h2>
+<p>Find the carrot <code>&gt;</code> within the Console window of RStudio. This is where commands are entered. Because R is a scripting language, if you use the Console within RStudio (or open R itself), you don’t point and click to run commands. Instead, you write instructions that are used by the computer to complete an operation. This can make it hard to learn at first because the instructions are specific. R is <strong>not</strong> tolerant of typos, punctuation errors, errant spaces, or other types of mistakes.</p>
 </div>
 <div id="arithmetic" class="section level2">
 <h2>Arithmetic</h2>
-<p>You can use R as a calculator; just enter the expression and press return. Experiment by evaluating the following expression.</p>
+<p>You can use R as a calculator; just enter the expression and press return. Experiment by entering the following expression within the console.</p>
 <pre class="r"><code>4*12</code></pre>
 <pre><code>## [1] 48</code></pre>
 <p>Order of operations applies and you don’t need to add an ‘=’ sign.</p>
@@ -299,7 +299,7 @@ div.tocify {
 </div>
 <div id="rmarkdown-basics" class="section level2">
 <h2>RMarkdown Basics</h2>
-<p>RMarkdown is one of many types of documents that can be created in RStudio and is the one we will use most frequently in BIS 15L.</p>
+<p>RMarkdown is one of many types of documents that can be created in RStudio and is the one we will use most frequently in the short course.</p>
 <ol style="list-style-type: decimal">
 <li>In RStudio, open a new markdown document: <strong>File&gt;New File&gt;R Markdown</strong> and title it “RMarkdown Practice”.<br />
 </li>
@@ -354,18 +354,6 @@ library(&quot;tidyverse&quot;)</code></pre>
 </li>
 <li>Lastly, commit and push this file to your GitHub repository.</li>
 </ol>
-</div>
-<div id="check-your-understanding-and-prepare-for-next-session" class="section level2">
-<h2>Check your understanding and prepare for next session</h2>
-<p><strong>1. What is the difference between R and RStudio? What is GitHub and why is it useful to programmers?</strong></p>
-<p><strong>2. Calculate the following expressions. Be sure to include each one in a separate code chunk.</strong><br />
-+ 5 - 3 * 2<br />
-+ 8 / 2 ** 2</p>
-<p><strong>3. <code>Objects</code> in R are a way in which we can store data or operations. We will use these a lot going forward and explain more next we meet. For now, make a new object <code>pi</code> as 3.14159265359 by running the following code chunk. You should now see the object <code>pi</code> in the environment window in the top right.</strong></p>
-<pre class="r"><code>pi &lt;- 3.14159265359</code></pre>
-<p><strong>4. In order to get help with any command in R, just type a <code>?</code> in front the command of interest. Practice this by running the following code chunk.</strong></p>
-<pre class="r"><code>?mean</code></pre>
-<p><strong>5. Push your final code to GitHub!</strong> Please be sure that you check the <code>keep md</code> file in the knit preferences. Check and see that it has uploaded.</p>
 </div>
 
 
