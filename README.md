@@ -24,7 +24,7 @@ Together, these two parts will serve as a starting point and foundation for the 
 
 ### Between Day One and Day Two
 
-We will place our instructions for your outside-of-class preparation work for each session here!  There will often be a slight delay before this is posted, so that we can tailor the documents to our progress in the synchronous session.
+Here is the Github location of the [Day 2 Prep Work](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/c81c92a0ee073a3e064e666c572b8fdaa8702c7a/Day2PrepWork/Day2PrepWork.Rmd) - the file you need is named Day2PrepWork.Rmd - this is an RMarkdown document. If you are using Github Desktop and have cloned the class repository (REALshortcourse_Summer2021), you should be able to find this within the new Day2PrepWork folder.  You'll want to open this file in RStudio, and then edit/run code within the document itself.  The document provides the instructions needed as you go.  Have fun, and don't hesitate to reach out if you are running into difficulties! 
 
 ### Day Two (July 28, 2021)
 
