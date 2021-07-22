@@ -33,13 +33,13 @@ pi <- 3.14159265359
 
 **5. Our very own Joel Ledford (a member of the steering committee who wasn't able to join us for the first day's session) has a set of R instructional videos that he has made for his own class!  Please watch this video, starting at 2:46 through 20:50 - this section of the video covers the usage of a package called ggplot to create scatter plots.  You can stop watching once Joel switches to bar plots.** Link: https://youtu.be/sVYGZiOApFM?t=166
 
-**6. In order to use ggplot yourself, you'll need to install and load a package called "ggplot2". Run the following code chunk to do this. (If you already have ggplot2 installed, you will get an error message, and you can click "cancel.")**
+**6. In order to use ggplot yourself, you'll need to install and load a package called "ggplot2". Run the following code chunk to do this. (If you already have ggplot2 installed, RStudio will give you a pop-up message informing you of this.  If you know for certain that you very recently installed the package, you can hit "cancel", but otherwise, it may be wise to hit "yes", which will restart RStudio and update the package.)  Just a warning that initial installation may take a minute or two, so don't be concerned or cancel mid-stream, just give it some time!**
 ```{r}
 install.packages("ggplot2")
 library(ggplot2)
 ```
 
-**7. To make a plot, we need to first specify the data and map the aesthetics. The aesthetics include how each variable in our data set will be used. In the example below, we will use the aes() function to identify the x and y variables in the plot. We will use the "point" geom to create a scatter plot.  Run the code block below for an initial plot!
+**7. To make a plot, we need to first specify the data and map the aesthetics. The aesthetics include how each variable in our data set will be used. In the example below, we use the built-in "iris" data set, and we will use the aes() function to identify the x and y variables in the plot. We will use the "point" geom to create a scatter plot.  Run the code block below for an initial plot!
 
 ```{r}
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
@@ -52,7 +52,8 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
 iris
 names(iris)
 ```
-Note that there were three commands run, each of which gave us a way to figure out potential variables to use! Can you find the variable names via all three methods?
+Note that there were three commands run, each of which gave us a way to figure out potential variables to use! Can you find the variable names via all three methods?  How many variables are there in total?
+
 
 **Next, in the blank code chunk below, use the iris dataset and geom_point again, but with a different x and y in the aes section than in the plot we made above. Run this code chunk, and keep tweaking your command if it doesn't come out the way you expect on your first try!**
 
