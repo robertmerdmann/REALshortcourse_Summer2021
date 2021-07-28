@@ -23,8 +23,8 @@ At the start (or before) each session, please make sure that you complete the fo
 2. Use objects to perform calculations.
 3. Import .csv files as data frames using `read_csv()`.  
 4. Understand and apply the syntax of building plots using `ggplot2`.  
-5. Build a boxplot using `ggplot2`.  
-6. Build a scatterplot using `ggplot2`.  
+5. Build a scatterplot using `ggplot2`.  
+6. Build a barplot using `ggplot2`.  
 
 ## Breakout Rooms  
 Please take 5 minutes to check over your answers to the pre-work and note any places of common confusion. If you get stuck or need help, don't forget to ask us!
