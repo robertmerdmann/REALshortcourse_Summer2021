@@ -30,9 +30,9 @@ Here is the Github location of the [Day 2 Prep Work](https://github.com/robertme
 
 Major topic - plotting in R
 
-We will work through the [Day 2 lesson](https://github.com/robertmerdmann/REALshortcourse_Summer2021/Day2/Day2_1.html) together - which will cover the importing of data from external files, all the way through using ggplot2 to build scatterplots and barplots.
+We will work through the [Day 2 lesson](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day2/Day2_1.html) together - which will cover the importing of data from external files, all the way through using ggplot2 to build scatterplots and barplots.
 
-It is unlikely that we'll get to the [Day 2 activity](https://github.com/robertmerdmann/REALshortcourse_Summer2021/Day2/Day2_2activity.html) during our synchronous time, but it is here for your reference even if we don't!
+It is unlikely that we'll get to the [Day 2 activity](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day2/Day2_2activity.html) during our synchronous time, but it is here for your reference even if we don't!
 
 
 ### Community Information
