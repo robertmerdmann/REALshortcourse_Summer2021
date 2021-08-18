@@ -48,6 +48,24 @@ We will work through the [Day 3 lesson](https://robertmerdmann.github.io/REALsho
 
 Here is the Github location of the [Day 3 homework / Day 4 prep work](https://github.com/robertmerdmann/REALshortcourse_Summer2021/tree/main/Day3homeworkandDay4prepwork) - with both a RMarkdown file and a .csv data source.  Good luck!
 
+### Day Four (August 11, 2021)
+
+Major topic - data manipulation using dplyr
+
+We will work through the [dplyr_part_1](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day4/dplyr_part_1.Rmd) activity as a group.
+
+### Between Day Four and Day Five
+
+In the [Day 4 folder](https://github.com/robertmerdmann/REALshortcourse_Summer2021/tree/main/Day4) in Github, there is an activity titled dplyr_superhero - you may not be able to fully complete it without the material planned for Day 5, but feel free to get started on the questions relating to what you learned in Day 4!
+
+In addition, we are hoping to hear from you about what is working well and not as well for you as members of the learning community - please complete [this short survey](https://docs.google.com/forms/d/e/1FAIpQLScBilOUML-qRPT1-crWuqIdRE-Bt8A-FPBO0oXTMVUoQLPl9g/viewform?usp=sf_link) when you have a chance! 
+
+### Day Five (August 18)
+
+Major topic - data manipulation using dplyr, continued
+
+We will work through the [dplyr_part_2](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day4/dplyr_part_2.Rmd) activity as a group.  (Note that this activity is found in the Day 4 folder!)
+
 ### Community Information
 
 Here, we will provide information about the members of the learning community, so you can get to know your colleagues.
