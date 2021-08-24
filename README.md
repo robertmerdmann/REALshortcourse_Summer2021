@@ -66,6 +66,16 @@ Major topic - data manipulation using dplyr, continued
 
 We will work through the [dplyr_part_2](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day4/dplyr_part_2.Rmd) activity as a group.  (Note that this activity is found in the Day 4 folder!)
 
+### Between Day Five and Day Six
+
+In the [Day 4 folder](https://github.com/robertmerdmann/REALshortcourse_Summer2021/tree/main/Day4) in Github, there is an activity titled dplyr_superhero - you should now be equipped to tackle this activity!
+
+### Day Six (August 25)
+
+Major topic - data transformation using mutate() and summarize()
+
+We will work through the [mutate_summarize](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day6/mutate_summarize.html) activity as a group - [.rmd file here](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day6/mutate_summarize.Rmd).
+
 ### Community Information
 
 Here, we will provide information about the members of the learning community, so you can get to know your colleagues.
