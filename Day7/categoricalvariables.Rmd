@@ -1,0 +1,168 @@
+---
+title: "Categorical variables and factors"
+date: "09-01-2021"
+output:
+  html_document:
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+## Learning Goals  
+*At the end of this exercise, you will be able to:*    
+1. Use the forcats package to manipulate factors, enabling a range of ways to handle categorical variables in your datasets. 
+
+## Questions
+If you have question or need help with a specific problem, please [email me](mailto: rerdmann@r.umn.edu).  
+
+## Intro 
+In prior sessions, we have learned how to use the `dplyr` package to manipulate dataframes in a number of useful ways - filtering, selecting, and more.  We've also learned how to graph and display data in a number of ways with `ggplot2`.  To add to these abilities, it would be useful to be able to work seamlessly with categorical data - where the values are text-based categories, rather than numbers. To do this, we'll take a closer look at the `forcats` package.
+
+
+
+## Install the `forcats` package
+```{r message=FALSE, warning=FALSE}
+#install.packages("forcats")
+```
+
+## Load the `tidyverse`, `forcats`, and `ggplot2`
+```{r message=FALSE, warning=FALSE}
+library("tidyverse")
+library("forcats")
+library("ggplot2")
+```
+
+## Load the data
+For these exercises we will continue using the data from the previous meeting - the "workshop_wide.csv" file.
+```{r}
+edu_dat <- read_csv("workshop_wide.csv")
+```
+
+Let's remind ourselves what the data look like - what variables appear to be categorical?
+```{r}
+#
+```
+
+## Why convert from character to factor?
+
+First, let's look at the frequency of counts within the "likert1_pre" variable.
+```{r}
+#
+```
+
+What things do you notice about this graph and table?  What might we want to change about it?
+
+
+
+In order to sequence things using the natural ordering or meaningful sequencing of a categorical variable, we can define the variable as a factor with levels.
+
+To do this for likert1_pre, first we can define the levels in a logical order.
+
+```{r}
+#
+```
+
+Now, let's create a factor using these levels.
+
+```{r}
+#
+```
+
+Now, let's try looking at this variable again...
+
+```{r}
+#
+```
+
+How does this table and plot differ from the first set we made?  Are these changes helpful?  Is there anything more we might want to be able to do?
+
+
+
+
+
+
+Let's try to display our "missing" level on our graph.
+
+
+```{r}
+#
+```
+
+
+## Factors within data tables
+For this first example, we created a factor from a variable in our edu_dat data table, but we didn't change the likert1_pre variable to be a factor in the data table itself.  What if we want to convert our data table into one containing factors in place of character variables?
+
+```{r}
+#
+```
+
+Okay, so it looks like this works for our variable in question!  Let's try plotting things again to confirm:
+
+```{r}
+#
+```
+
+Oh no!  We thought we converted to a factor - what happened?  We didn't define the level ordering, and R will default to alphabetical if you don't tell it otherwise.
+
+Let's try to set the levels to fix our data table... One way to do this is manually.
+
+```{r}
+#
+```
+
+```{r}
+#
+```
+
+What if we want to reorder the levels, so that the most frequent response comes first?
+
+```{r}
+#
+```
+
+What if we wanted to combine factor levels, so that we had three levels for our likert1_pre factor - one for general agreement, one for neutral, and one for general disagreement?
+
+```{r}
+#
+```
+
+As you can see, fct_recode is useful for both collapsing levels into groups, as well as for renaming factor levels on the fly.
+
+
+## Practice in breakout rooms!
+
+1. Take a look at edu_dat again. Identify at least 3 variables you could meaningfully convert to factors.  Once you've decided what to convert, make it happen within the data table!  How can you check to ensure the conversion happened?
+
+```{r}
+#
+```
+
+2. Now that you've converted characters into factors, choose one of these factors and reorder the levels in a way that makes sense to you.  Then, plot the frequency of the factor levels in question.
+
+
+```{r}
+#
+```
+
+```{r}
+#
+```
+
+3. Imagine you enacted a major curriculum redesign in 2018, and you'd like to compare final exam scores before the redesign with scores after the redesign. Use factors to accomplish this grouping and comparison - there's more than one way to successfully display your results!
+
+```{r}
+
+#
+```
+
+
+
+## Additional resources
+
+Factors chapter in "R for Data Science" - https://r4ds.had.co.nz/factors.html
+
+Official forcats "cheatsheet" - https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf
+
+That's it for now - great work!
