@@ -76,6 +76,16 @@ Major topic - data transformation using mutate() and summarize()
 
 We will work through the [mutate_summarize](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day6/mutate_summarize.html) activity as a group - [.rmd file here](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day6/mutate_summarize.Rmd).
 
+### Between Day Six and Day Seven
+
+You should attempt to complete the practice problems found at the end of the [Day Six lesson](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day6/mutate_summarize.Rmd).
+
+### Day Seven (September 1)
+
+Major topic - working with categorical data in factors with forcats
+
+We will work through the [categoricalvariables](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day7/categoricalvariables.html) activity as a group - [.rmd file here](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day7/categoricalvariables.Rmd).
+
 ### Community Information
 
 Here, we will provide information about the members of the learning community, so you can get to know your colleagues.
