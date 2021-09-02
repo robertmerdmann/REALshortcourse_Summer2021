@@ -112,10 +112,10 @@ ggplot(edu_dat, aes(likert1_pre)) +
 
 Oh no!  We thought we converted to a factor - what happened?  We didn't define the level ordering, and R will default to alphabetical if you don't tell it otherwise.
 
-Let's try to set the levels to fix our data table... One way to do this is manually.
+Let's try to set the levels to fix our data table...
 
 ```{r}
-levels(edu_dat$likert1_pre) <- c("Strongly agree", "Agree", "Neutral", "Disagree", "Strongly disagree")
+edu_dat$likert1_pre <- factor(edu_dat$likert1_pre, levels = c("Strongly agree", "Agree", "Neutral","Disagree","Strongly disagree"))
 ```
 
 ```{r}
