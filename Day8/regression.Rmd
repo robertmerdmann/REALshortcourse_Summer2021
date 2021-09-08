@@ -1,0 +1,162 @@
+---
+title: "Regression and wrap-up"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+## Learning goals
+*At the end of this lesson, you should be able to:*    
+
+1. Use `lm()` to perform a linear regression with appropriately formatted data.  
+
+2. Interpret the output of `lm()` to understand the relationship between predictor variables and an outcome.
+
+3. Use `?` and online documentation to find and use new functions. 
+
+4. Make a plan for what you can do with your current R skills and what you intend to work on next.
+
+## Questions
+If you have question or need help with a specific problem, please [email me](mailto: refurrow@ucdavis.edu).  
+
+## Load the tidyverse  
+```{r}
+library("tidyverse")
+```
+
+
+## Load the data  
+Today we'll load the data directly. We'll work with an expanded version of the simulated education dataset `workshop_wide_v2.csv`. The code below should work when run directly from the `regression.Rmd` file using the green right-arrow in each code chunk. The Rmd file should be in the Day8 folder, which should also contain a folder called "data". If you try to run today's code directly in the Console on the lower left of your screen/monitor, make sure that your working directory is the Day8 folder, wherever you have put that. 
+ 
+```{r}
+edu_dat <- read_csv("data/workshop_wide_v2.csv")
+```
+
+## Creating new (useful) variables
+Let's take a quick look at our data to see what's new.
+
+```{r}
+glimpse(edu_dat)
+```
+
+Okay, we have only a small subset of our original variables, and no new variables.  However we do have a new course included.  Let's take a look at the course variable very quickly.
+
+```{r}
+### Take a minute to try to write some sort of code to summarize/count the number of each value in the "course" variable
+
+### Your code below ###
+
+
+```
+
+
+
+## Visualizing point data
+Do students learn anything in our classes?  We're not going to answer that question, but we can pretend to by looking at the relatinoship between a student's prior gpa, `gpa_prior` and their final exam score, `final_exam`.
+
+Before you fit a model, stop and visualize. Let's use our old friend `ggplot()`. ***Use `ggplot()` with `geom_point()` to create a scatterplot with `gpa_prior` on the x-axis and `final_exam` on the y-axis.***
+
+```{r}
+### Your code below
+
+```
+
+Doesn't look like much of a pattern to me. But sometimes it is hard to see patterns in scatterplots when there are a lot of points. One alternative visualization is a hexplot (`geom_hex()`), in which you color-code the relative amount of points occurring within particular hexagons on a two-dimensional plot/plane.  It's hard to explain, but will make more sense when visualized.
+
+```{r}
+### We will write this together
+
+```
+
+It doesn't look like there is really any obvious pattern. (And maybe that's a good thing -- it means that these courses are not just rewarding students who entered with more preparation.) 
+
+
+## Fitting a linear model
+
+Let's try out a linear regression, using prior gpa as a predictor for final exam score. Because we visualized ahead of time, we know that we probably shouldn't see any particularly strong result. We can use the `?` function to see how we need to enter the arguments for `lm()`.
+
+```{r, eval = FALSE}
+?lm
+```
+
+Okay, so we first enter a "formula", then specify the dataframe we are using. Formulas have the name of the response (dependent) variable, then a tilde, `~`, then the names of the explanatory (independent) variables with plus signs or asterisks for an additive or interactive model, respectively. The explanatory variables in a linear regression are often called *predictors* or *covariates*. Let's go ahead and do that with `final_exam` and `gpa_prior`.
+
+
+```{r}
+fit <- lm(final_exam ~ gpa_prior, data = edu_dat)
+summary(fit)
+```
+
+Let's interpret. When quickly scanning a regression table, there are a few things to check out.  
+
+1. Check the model coefficient(s). First, look at the table (here it has 2 rows and 4 columns) and check out the "Estimates".  Ignore the "(Intercept)" row, that is generally not interesting. We instead are focused on the relationship between `gpa_prior` and `final_exam`. That estimate (the coefficient) is -0.6631.  That means there is actually a weak, negative relationship between final exam score and gpa, with students with a gpa 1 point higher scoring on average -0.6631 points lower on the final exam.  
+2. Check the p-value(s). Although p-values are not always wildly useful, they help you know whether this coefficient is strong compared to the overall variation in the data. P-values are in the final column, "Pr(>|t|)". Ignore the intercept row.  What is our p-value for `gpa_prior`?
+3. Check the R-squared value near the bottom of the summary (written here as "Multiple R-squared"). This value ranges from 0 to 1, with a higher number indicating that more of the variation in the response variable is explained by the explanatory variables in the model. A low number indicates that our model isn't expaining much of the pattern of how/why the response variable varies in our data.
+
+
+## A data tidying task
+
+Did you notice that the regression summary mentioned dropping 18 observations? Those were due to an `NA` value for either `gpa_prior` or `final_exam`.  I would like you to create a new dataframe, `edu_clean`, that drops every row that has an `NA` for any variable. Do it using the tidyverse, which will have a nice simple function to help you.  But I'm not going to tell you what it is. ***Head online to do some quick searching (I recommend using the term "tidyverse" along with something about getting rid of `NA` values), then we'll report back. You'll need to add a pipe and your new function to the code below.***
+
+```{r}
+edu_clean <- edu_dat %>%
+  mutate(admit_level = ifelse(admit_level == "No record", NA, admit_level))
+# add a pipe to the line above and add your NA removing function
+```
+
+
+## Adding more predictors
+All in all, our first model was not very compelling. In simple terms, there doesn't seem to be much of a (linear) relationship between gpa and final exam score. Let's add `course` as a second predictor.
+
+
+```{r}
+fit2 <- lm(final_exam ~ gpa_prior + course, data = edu_clean)
+summary(fit2)
+```
+
+Is this model doing a good job of explaining the variation in final exam score? Why or why not?
+
+Let's also visualize our data, now that we're including course. One nice way to do that in R is to create "facets". In other words, you can create mini-plots for each level of the `course` variable. ***Search online to find a function/layer that you can add to the `ggplot()` below to facet with courses as the variable.***
+
+```{r, eval= FALSE}
+edu_clean %>%
+  ggplot(aes(x = gpa_prior, y = final_exam)) + 
+  geom_point() +   # add your facet code to the next line
+```
+
+Alright, courses 1 and 2 look like the big, shapeless cloud that we saw when plotting all the data at once.  But maybe there's a bit of a positive relationship in course 3. We can actually visualize separate linear models for each course using a function we saw way back in week 2, `geom_smooth()`.
+
+```{r}
+### We'll write this together, just adding one layer to the plot from above
+
+```
+
+Okay, the pattern in course 3 looks pretty different. How can we allow our model to reflect this?  As an interaction! An adding "interactions" in a regression allows us to see how particular combinations of course and gpa have different patterns. It essentially allows us to fit a line with a different slope for each course. (With the previous, additive model, we could only adjust the whole line up or down for each course.)
+
+## Breakout room chat
+
+There is a lot of nuance to interpreting these models, so let's go into breakout rooms as we look at the model summary by running the code just below. In your group, discuss ***What patterns is this model finding? How is the model doing overall? What are your takeaways from this regression table?***  We will come together to make sense of this.
+
+```{r}
+fit3 <- lm(final_exam ~ gpa_prior*course, data = edu_dat)
+summary(fit3)
+```
+
+## Regression sandbox (time permitting)
+
+Let's take 10 minutes for you to play around individually. Try adding another variable (or two), make some decisions about additive/interactions, filter the data in some way, etc.
+
+```{r}
+# Your code below
+
+```
+
+
+## Looking ahead
+
+We'll take the last part of today offline from R. This is our final meeting for the short course. It's a time to reflect on what we learned, orient ourselves to our longer term goals, and anticipate and strategize about the biggest upcoming challenges.
