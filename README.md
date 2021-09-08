@@ -86,6 +86,14 @@ Major topic - working with categorical data in factors with forcats
 
 We will work through the [categoricalvariables](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day7/categoricalvariables.html) activity as a group - [.rmd file here](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day7/categoricalvariables.Rmd).
 
+### Day Eight (September 8)
+
+Major topic - Linear Regressions and Modeling
+
+We will work through the [regression](https://robertmerdmann.github.io/REALshortcourse_Summer2021/Day8/regression.html) activity as a group - [.rmd file here](https://github.com/robertmerdmann/REALshortcourse_Summer2021/blob/main/Day8/regression.Rmd).
+
+Congratulations - you've made it through the short course!!
+
 ### Community Information
 
 Here, we will provide information about the members of the learning community, so you can get to know your colleagues.
